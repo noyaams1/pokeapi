@@ -6,3 +6,5 @@ __pycache__/
 json_functions.py
 .terraform/
 .terraform.lock.hcl 
+terraform.tfstate
+terraform.tfstate.backup

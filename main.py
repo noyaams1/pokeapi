@@ -1,5 +1,6 @@
 from constant_vars import DB_PATH
-from json_functions import load_json
+
+# from json_functions import load_json
 from utilities import (
     get_random_pokemon,
     get_pokemon_by_id_from_db,
