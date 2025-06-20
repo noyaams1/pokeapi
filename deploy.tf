@@ -25,7 +25,7 @@ data "aws_ami" "amazon_linux_latest" {
 
 resource "aws_security_group" "app_sg" {
   name        = "app_sg"
-  description = "Allow SSH inbound traffic to the pokemon's app server"
+  description = "allowing ssh traffic into the app server"
   vpc_id      = data.aws_vpc.default.id
   
  ingress {
@@ -52,7 +52,7 @@ resource "aws_security_group" "app_sg" {
 resource "aws_instance" "pokemon_app" {
   ami           = data.aws_ami.amazon_linux_latest.id
   instance_type = "t2.micro"
-  key_pair="vockey"
+  key_name="vockey"
   iam_instance_profile = "LabInstanceProfile"
   user_data     = file("user_data.sh")
   vpc_security_group_ids = [aws_security_group.app_sg.id]
@@ -77,6 +77,12 @@ resource "aws_dynamodb_table" "pokemons_collection" {
   attribute {
     name = "id"                            #Secondary key
     type = "N"
+  }
+
+  global_secondary_index {
+    name               = "id-index"
+    hash_key           = "id"
+    projection_type    = "ALL"
   }
 
   tags = {
