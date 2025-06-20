@@ -1,6 +1,3 @@
-# from db import pokemon
-
-
 # --- Show drawing options to the user---
 def print_menu():
     print("\nHow would you like to draw your Pokémon? ")

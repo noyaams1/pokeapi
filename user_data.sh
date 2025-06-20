@@ -1,10 +1,10 @@
 #!/bin/bash
 
 # Update system
-sudo yum update -y
+sudo dnf update -y
 
 # Install Python 3, pip, and git
-sudo yum install -y python3 git
+sudo dnf install -y python3 python3-pip git
 
 # Upgrade pip
 sudo pip3 install --upgrade pip
@@ -14,7 +14,7 @@ cd /home/ec2-user
 git clone https://github.com/noyaams1/pokeapi
 cd pokeapi
 # Installing requirements
-pip3 install -r requirements.txt
+sudo pip3 install -r requirements.txt
 
 # Set permissions so ec2-user owns the files
 sudo chown -R ec2-user:ec2-user /home/ec2-user/pokeapi

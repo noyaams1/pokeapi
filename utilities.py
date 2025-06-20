@@ -69,12 +69,3 @@ def get_pokemon_by_name_from_db():
         details = get_pokemon_details_from_api(name)
         table.put_item(Item=details)
     return details
-
-
-# random_pokemon = get_random_pokemon()
-# pokemon_by_id = get_pokemon_by_id_from_db()
-# pokemon_by_name = get_pokemon_by_name_from_db()
-
-# random_pokemon = get_random_pokemon()
-# pokemon_by_id = _get_pokemon_by_id_from_db()
-# pokemon_by_name = get_pokemon_by_name_from_db()

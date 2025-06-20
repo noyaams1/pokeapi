@@ -1,14 +1,9 @@
-from constant_vars import DB_PATH
-
-# from json_functions import load_json
 from utilities import (
     get_random_pokemon,
     get_pokemon_by_id_from_db,
     get_pokemon_by_name_from_db,
 )
 from ui_messages import print_menu, print_pokemon
-
-# from db import get_all_pokemons_from_db
 
 
 # --- Running the program---
