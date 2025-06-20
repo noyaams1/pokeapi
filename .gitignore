@@ -1,0 +1,8 @@
+
+db.py
+pokemons_collection.json
+.venv/
+.__pycache__/
+json_functions.py
+.terraform/
+.terraform.lock.hcl 
