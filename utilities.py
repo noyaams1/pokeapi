@@ -4,7 +4,7 @@ import boto3
 import random
 
 table_name = "pokemons_collection"
-db_resource = boto3.resource("dynamodb")
+db_resource = boto3.resource("dynamodb", region_name="us-west-2")
 table = db_resource.Table(table_name)
 
 
@@ -33,7 +33,7 @@ def get_random_pokemon():
     chosen = random.choice(all_pokemon)["name"]
     details = get_pokemon_details_from_api(chosen)
     if details:
-        print(f"🎲 Adding new Pokémon: {details["name"]}")
+        print(f"🎲 Adding new Pokémon: {details['name']}")
         table.put_item(Item=details)
     return details
 
