@@ -154,6 +154,22 @@ The application starts automatically on boot through the user data script config
 
 ---
 
+```text
+How would you like to draw your Pokémon?
+
+🎲 Adding new Pokémon: Pikachu
+
+🎯 Pokémon Drawn:
+ Name: Pikachu
+ ID: 25
+ Height: 4
+ Weight: 60
+ Types: electric
+
+```
+
+---
+
 ## 📦 Project Structure
 
 ```
@@ -168,22 +184,4 @@ pokeapi/
 ├── requirements.txt           # Python dependencies
 ├── .gitignore                 # Git ignore rules
 └── README.md                  # This file
-```
-
----
-
-## 🧪 Example CLI Usage
-
-```text
-How would you like to draw your Pokémon?
-
-🎲 Adding new Pokémon: Pikachu
-
-🎯 Pokémon Drawn:
- Name: Pikachu
- ID: 25
- Height: 4
- Weight: 60
- Types: electric
-
 ```
