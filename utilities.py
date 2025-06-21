@@ -1,26 +1,11 @@
 from api import get_all_pokemon_data, get_pokemon_details_from_api
-from boto3.dynamodb.conditions import Key
 import boto3
+from boto3.dynamodb.conditions import Key
 import random
 
 table_name = "pokemons_collection"
 db_resource = boto3.resource("dynamodb", region_name="us-west-2")
 table = db_resource.Table(table_name)
-
-
-# --- checking if pokemon is already in DB, if not: adding it.
-# def update_db_if_needed(db, details):
-#     name = details["name"]
-#     if name in db:
-#         print(f"✅ Pokémon {name} is already in your collection!")
-#         print_pokemon(db[name])
-#         return True
-#     else:
-#         print(f"🎲 Adding new Pokémon: {name}")
-#         db[name] = details
-#         save_json(db, DB_PATH)
-#         print_pokemon(details)
-#         return False
 
 
 # --- Random drawing---

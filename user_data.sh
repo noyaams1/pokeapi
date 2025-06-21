@@ -13,6 +13,7 @@ sudo pip3 install --upgrade pip
 cd /home/ec2-user
 git clone https://github.com/noyaams1/pokeapi
 cd pokeapi
+
 # Installing requirements
 sudo pip3 install -r requirements.txt
 
