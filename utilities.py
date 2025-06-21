@@ -3,6 +3,8 @@ import boto3
 from boto3.dynamodb.conditions import Key
 import random
 
+# Connect to the DynamoDB table "pokemons_collection"
+
 table_name = "pokemons_collection"
 db_resource = boto3.resource("dynamodb", region_name="us-west-2")
 table = db_resource.Table(table_name)
